@@ -20,12 +20,12 @@ app.use(function(req, res, next) {
 
 
 // Mongoose Connect
-mongoose.connect("mongodb://localhost/invoicr",{useNewUrlParser: true,
-useFindAndModify: false,useUnifiedTopology: true})
-// mongoose.connect("mongodb+srv://DevaPriyanTA:Deva562002!@cluster0.mxxho.mongodb.net/invoicrDB",{useNewUrlParser: true,
-// useFindAndModify: false,useUnifiedTopology: true}).then(()=>{
-//   console.log("Connected to database.................................");
-// });
+// mongoose.connect("mongodb://localhost/invoicr",{useNewUrlParser: true,
+// useFindAndModify: false,useUnifiedTopology: true})
+mongoose.connect("mongodb+srv://DevaPriyanTA:Deva562002!@cluster0.mxxho.mongodb.net/invoicrDB",{useNewUrlParser: true,
+useFindAndModify: false,useUnifiedTopology: true}).then(()=>{
+  console.log("Connected to database.................................");
+});
 const db = mongoose.connection;
 
 // Client Folder
