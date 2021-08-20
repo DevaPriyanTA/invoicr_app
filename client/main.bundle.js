@@ -60,7 +60,7 @@ var AppComponent = (function () {
             selector: 'app-root',
             template: __webpack_require__(683),
             styles: [__webpack_require__(676)]
-        }), 
+        }),
         __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
@@ -138,7 +138,7 @@ var AppModule = (function () {
             ],
             providers: [__WEBPACK_IMPORTED_MODULE_12__services_customer_service__["a" /* CustomerService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
-        }), 
+        }),
         __metadata('design:paramtypes', [])
     ], AppModule);
     return AppModule;
@@ -199,7 +199,7 @@ var AddCustomerComponent = (function () {
             selector: 'app-add-customer',
             template: __webpack_require__(684),
             styles: [__webpack_require__(677)]
-        }), 
+        }),
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_customer_service__["a" /* CustomerService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_customer_service__["a" /* CustomerService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */]) === 'function' && _c) || Object])
     ], AddCustomerComponent);
     return AddCustomerComponent;
@@ -256,7 +256,7 @@ var AddInvoiceComponent = (function () {
             selector: 'app-add-invoice',
             template: __webpack_require__(685),
             styles: [__webpack_require__(678)]
-        }), 
+        }),
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_customer_service__["a" /* CustomerService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_customer_service__["a" /* CustomerService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */]) === 'function' && _c) || Object])
     ], AddInvoiceComponent);
     return AddInvoiceComponent;
@@ -319,7 +319,7 @@ var CustomerDetailsComponent = (function () {
             selector: 'app-customer-details',
             template: __webpack_require__(686),
             styles: [__webpack_require__(679)]
-        }), 
+        }),
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_customer_service__["a" /* CustomerService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_customer_service__["a" /* CustomerService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */]) === 'function' && _c) || Object])
     ], CustomerDetailsComponent);
     return CustomerDetailsComponent;
@@ -371,7 +371,7 @@ var CustomersComponent = (function () {
             selector: 'app-customers',
             template: __webpack_require__(687),
             styles: [__webpack_require__(680)]
-        }), 
+        }),
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_customer_service__["a" /* CustomerService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_customer_service__["a" /* CustomerService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object])
     ], CustomersComponent);
     return CustomersComponent;
@@ -446,7 +446,7 @@ var EditCustomerComponent = (function () {
             selector: 'app-edit-customer',
             template: __webpack_require__(688),
             styles: [__webpack_require__(681)]
-        }), 
+        }),
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_customer_service__["a" /* CustomerService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_customer_service__["a" /* CustomerService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */]) === 'function' && _c) || Object])
     ], EditCustomerComponent);
     return EditCustomerComponent;
@@ -482,7 +482,7 @@ var NavbarComponent = (function () {
             selector: 'app-navbar',
             template: __webpack_require__(689),
             styles: [__webpack_require__(682)]
-        }), 
+        }),
         __metadata('design:paramtypes', [])
     ], NavbarComponent);
     return NavbarComponent;
@@ -639,51 +639,51 @@ var CustomerService = (function () {
         this.http = http;
     }
     CustomerService.prototype.getCustomers = function () {
-        return this.http.get('http://localhost:3000/api/customers')
+        return this.http.get('http://122.173.237.97:3000/api/customers')
             .map(function (res) { return res.json(); });
     };
     CustomerService.prototype.getCustomer = function (id) {
-        return this.http.get('http://localhost:3000/api/customers/' + id)
+        return this.http.get('http://122.173.237.97:3000/api/customers/' + id)
             .map(function (res) { return res.json(); });
     };
     CustomerService.prototype.saveCustomer = function (customer) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/api/customers', customer, { headers: headers })
+        return this.http.post('http://122.173.237.97:3000/api/customers', customer, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     CustomerService.prototype.updateCustomer = function (id, customer) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]();
         headers.append('Content-Type', 'application/json');
-        return this.http.put('http://localhost:3000/api/customers/' + id, customer, { headers: headers })
+        return this.http.put('http://122.173.237.97:3000/api/customers/' + id, customer, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     CustomerService.prototype.deleteCustomer = function (id) {
-        return this.http.delete('http://localhost:3000/api/customers/' + id)
+        return this.http.delete('http://122.173.237.97:3000/api/customers/' + id)
             .map(function (res) { return res.json(); });
     };
     CustomerService.prototype.getInvoices = function (customer_id) {
-        return this.http.get('http://localhost:3000/api/invoices/customer/' + customer_id)
+        return this.http.get('http://122.173.237.97:3000/api/invoices/customer/' + customer_id)
             .map(function (res) { return res.json(); });
     };
     CustomerService.prototype.markPaid = function (id, invoice) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]();
         headers.append('Content-Type', 'application/json');
-        return this.http.put('http://localhost:3000/api/invoices/' + id, invoice, { headers: headers })
+        return this.http.put('http://122.173.237.97:3000/api/invoices/' + id, invoice, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     CustomerService.prototype.deleteInvoice = function (id) {
-        return this.http.delete('http://localhost:3000/api/invoices/' + id)
+        return this.http.delete('http://122.173.237.97:3000/api/invoices/' + id)
             .map(function (res) { return res.json(); });
     };
     CustomerService.prototype.saveInvoice = function (invoice) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/api/invoices', invoice, { headers: headers })
+        return this.http.post('http://122.173.237.97:3000/api/invoices', invoice, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     CustomerService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(), 
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */]) === 'function' && _a) || Object])
     ], CustomerService);
     return CustomerService;
