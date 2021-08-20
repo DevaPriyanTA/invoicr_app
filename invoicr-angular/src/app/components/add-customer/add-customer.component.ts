@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CustomerService} from '../../services/customer.service';
-import {Router} from '@angular/router';
+import {Router,ActivatedRoute, Params} from '@angular/router';
 
 @Component({
   selector: 'app-add-customer',
@@ -17,7 +17,7 @@ export class AddCustomerComponent implements OnInit {
   city;
   state;
   zip;
-  constructor(private customerService:CustomerService, private router: Router) { }
+  constructor(private customerService:CustomerService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
   }
