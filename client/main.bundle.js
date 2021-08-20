@@ -426,6 +426,7 @@ var EditCustomerComponent = (function () {
         var customer = {
             first_name: this.first_name,
             last_name: this.last_name,
+            company: this.company,
             email: this.email,
             phone: this.phone,
             address: {
